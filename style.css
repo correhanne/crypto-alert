@@ -1,0 +1,21 @@
+body {
+  transition: background 0.3s, color 0.3s;
+}
+.dark {
+  background-color: #1f2937;
+  color: #fff;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.dark .card {
+  background: #374151;
+}
+.big-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #10b981;
+}
