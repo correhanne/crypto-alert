@@ -1,21 +1,33 @@
+:root {
+  --primary-color: #6366f1;
+  --accent-color: #10b981;
+  --bg-dark: #1f2937;
+  --bg-card-dark: #374151;
+}
+
 body {
   transition: background 0.3s, color 0.3s;
 }
+
 .dark {
-  background-color: #1f2937;
+  background-color: var(--bg-dark);
   color: #fff;
 }
+
 .card {
   background: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s;
 }
+
 .dark .card {
-  background: #374151;
+  background-color: var(--bg-card-dark);
 }
+
 .big-price {
   font-size: 2rem;
   font-weight: bold;
-  color: #10b981;
+  color: var(--accent-color);
 }
