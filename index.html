@@ -9,50 +9,55 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container mx-auto px-4 py-6">
-      <div class="flex justify-between items-center mb-6">
+    <main class="container mx-auto px-4 py-6">
+      <header class="flex justify-between items-center mb-6">
         <h1 class="text-3xl font-bold">Crypto Alert System</h1>
-        <button id="toggleTheme" class="bg-gray-800 text-white px-4 py-2 rounded">Mörkt läge</button>
-      </div>
+        <button id="toggleTheme" class="bg-gray-800 text-white px-4 py-2 rounded">
+          Mörkt läge
+        </button>
+      </header>
 
       <div class="grid md:grid-cols-2 gap-6">
         <section class="card">
-          <h2>Prisöversikt</h2>
+          <h2 class="text-xl font-semibold">Prisöversikt</h2>
           <p id="price" class="big-price">$--</p>
           <p>Uppdateras om <span id="countdown">10</span> sek</p>
         </section>
 
         <section class="card">
-          <h2>Testa ljud</h2>
-          <select id="soundSelector">
+          <h2 class="text-xl font-semibold">Testa ljud</h2>
+          <label for="soundSelector">Välj ljud:</label>
+          <select id="soundSelector" class="w-full mb-2 p-2 border rounded">
             <option value="ding">Ding</option>
             <option value="alarm">Alarm</option>
             <option value="beep">Beep</option>
           </select>
-          <button id="playSound">Spela</button>
+          <button id="playSound" class="bg-purple-600 text-white px-4 py-2 rounded w-full">
+            Spela ljud
+          </button>
         </section>
       </div>
 
       <section class="card my-6">
-        <h2>Prisgraf</h2>
+        <h2 class="text-xl font-semibold mb-2">Prisgraf</h2>
         <canvas id="chart" height="100"></canvas>
       </section>
 
       <section class="card">
-        <h2>Inställningar</h2>
-        <label>Vald valuta:</label>
-        <select id="currency">
+        <h2 class="text-xl font-semibold mb-2">Inställningar</h2>
+        <label for="currency">Vald valuta:</label>
+        <select id="currency" class="w-full mb-4 p-2 border rounded">
           <option value="bitcoin">Bitcoin</option>
           <option value="ethereum">Ethereum</option>
         </select>
 
-        <label>Större ökning (%):</label>
+        <label for="threshold">Varningströskel (%):</label>
         <input id="threshold" type="range" min="1" max="10" />
-        <span id="rangeVal">5</span>%
+        <span id="rangeVal">5%</span>
       </section>
-    </div>
+    </main>
 
-    <audio id="audio"></audio>
-    <script src="script.js"></script>
+    <audio id="audio" preload="auto"></audio>
+    <script src="script.js" defer></script>
   </body>
 </html>
